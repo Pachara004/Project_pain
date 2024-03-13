@@ -18,22 +18,16 @@ export class GraphComponent implements OnInit, AfterViewInit {
 
   GetImg: VoteImg[] = [];
   isLoading: boolean = true;
-  isLoggedIn: boolean = false;
+
   constructor(private getimgservice: Getimgservice ,private router: Router) {}
 
   ngOnInit(): void {
-    if (localStorage.getItem('user')) {
-      const users = JSON.parse(localStorage.getItem('user')!);
-      const userID = users[0].userID.toString();
-      this.isLoggedIn = true;
-      this.loadData();
-    }
+    this.loadData();
   }
 
   async loadData(): Promise<void> {
     try {
       const user = JSON.parse(localStorage.getItem('user')!);
-      // console.log(user);
       if (user) {
         this.GetImg = await this.getimgservice.GetGraph(user[0].userID);
         console.log('GetImg:', this.GetImg);
@@ -52,10 +46,9 @@ export class GraphComponent implements OnInit, AfterViewInit {
         this.createCharts();
       }
     }, 0);
-  }
+  }  
 
   createCharts(): void {
-    // console.log('GetImg:', this.GetImg);
     for (const img of this.GetImg) {
       const id = `myChart${img.imageID}`;
       const existingCanvas = document.getElementById(id) as HTMLCanvasElement;
@@ -73,8 +66,6 @@ export class GraphComponent implements OnInit, AfterViewInit {
       const totalScoreArray = img.totalScore.split(',').map(Number);
   
       const labels = this.generateDateLabels(sevenDaysAgo);
-      // const data = totalScoreArray;
-      // const labels = voteDateArray;
       const data = this.generateDataArray(voteDateArray, totalScoreArray, sevenDaysAgo);
   
       new Chart(existingCanvas, {
@@ -83,7 +74,7 @@ export class GraphComponent implements OnInit, AfterViewInit {
           labels: labels,
           datasets: [
             {
-              label: 'คะแนนในแต่ละวัน',
+              label: 'Scores for each days',
               data: data,
               borderWidth: 2,
               pointRadius: 8,
