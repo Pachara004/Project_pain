@@ -1,79 +1,134 @@
 {
+<<<<<<< HEAD
   "hash": "3d4e47e6",
   "configHash": "94b34858",
   "lockfileHash": "7f55838e",
   "browserHash": "3ef082ed",
+=======
+  "hash": "01667a18",
+  "configHash": "d3c6d37e",
+  "lockfileHash": "03db4359",
+  "browserHash": "9c3631b3",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
+<<<<<<< HEAD
       "fileHash": "dac80259",
+=======
+      "fileHash": "067330e0",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     },
     "@angular/common/http": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
+<<<<<<< HEAD
       "fileHash": "98fe438f",
+=======
+      "fileHash": "d0f1c44a",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
+<<<<<<< HEAD
       "fileHash": "a543422f",
+=======
+      "fileHash": "8a1b4837",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     },
     "@angular/material/button": {
       "src": "../../../../../node_modules/@angular/material/fesm2022/button.mjs",
       "file": "@angular_material_button.js",
+<<<<<<< HEAD
       "fileHash": "5bcf982e",
+=======
+      "fileHash": "3fcb8e57",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     },
     "@angular/material/core": {
       "src": "../../../../../node_modules/@angular/material/fesm2022/core.mjs",
       "file": "@angular_material_core.js",
+<<<<<<< HEAD
       "fileHash": "49c514a9",
+=======
+      "fileHash": "9cb1bb63",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     },
     "@angular/material/icon": {
       "src": "../../../../../node_modules/@angular/material/fesm2022/icon.mjs",
       "file": "@angular_material_icon.js",
+<<<<<<< HEAD
       "fileHash": "d0e72605",
+=======
+      "fileHash": "5093ba20",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
+<<<<<<< HEAD
       "fileHash": "3869bc1f",
+=======
+      "fileHash": "621a108a",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     },
     "@angular/platform-browser/animations/async": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations/async.mjs",
       "file": "@angular_platform-browser_animations_async.js",
+<<<<<<< HEAD
       "fileHash": "9ed3b10f",
+=======
+      "fileHash": "01cbe864",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
+<<<<<<< HEAD
       "fileHash": "95ce2de4",
+=======
+      "fileHash": "d8eab73a",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     },
     "chart.js": {
       "src": "../../../../../node_modules/chart.js/dist/chart.js",
       "file": "chart__js.js",
+<<<<<<< HEAD
       "fileHash": "e4d46a52",
+=======
+      "fileHash": "4ac8ed62",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     },
     "ngx-cookie-service": {
       "src": "../../../../../node_modules/ngx-cookie-service/fesm2022/ngx-cookie-service.mjs",
       "file": "ngx-cookie-service.js",
+<<<<<<< HEAD
       "fileHash": "83aee582",
+=======
+      "fileHash": "3d7af454",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     },
     "rxjs": {
       "src": "../../../../../node_modules/rxjs/dist/esm5/index.js",
       "file": "rxjs.js",
+<<<<<<< HEAD
       "fileHash": "2b701f52",
+=======
+      "fileHash": "72263a4d",
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
       "needsInterop": false
     }
   },
@@ -81,6 +136,12 @@
     "browser-GMPCGE4J": {
       "file": "browser-GMPCGE4J.js"
     },
+<<<<<<< HEAD
+=======
+    "chunk-ENXEROMF": {
+      "file": "chunk-ENXEROMF.js"
+    },
+>>>>>>> 0cd43c92758852042cd2bd7771cc310dc62f5524
     "chunk-KCJFMZQ4": {
       "file": "chunk-KCJFMZQ4.js"
     },
