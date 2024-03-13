@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { Getimgservice } from '../services/api/Getimgservice';
 import { VoteImg } from '../model/img';
 import { Chart } from 'chart.js';
-import { CookieService } from 'ngx-cookie-service';
 
 @Component({
     selector: 'app-graph',
@@ -20,7 +19,7 @@ export class GraphComponent implements OnInit, AfterViewInit {
   GetImg: VoteImg[] = [];
   isLoading: boolean = true;
   isLoggedIn: boolean = false;
-  constructor(private getimgservice: Getimgservice ,private router: Router,private cookieService: CookieService) {}
+  constructor(private getimgservice: Getimgservice ,private router: Router) {}
 
   ngOnInit(): void {
     if (localStorage.getItem('user')) {
@@ -34,9 +33,10 @@ export class GraphComponent implements OnInit, AfterViewInit {
   async loadData(): Promise<void> {
     try {
       const user = JSON.parse(localStorage.getItem('user')!);
+      // console.log(user);
       if (user) {
-        this.GetImg = await this.getimgservice.GetGraph(user[0].uid);
-        console.log('getimg:', this.GetImg);
+        this.GetImg = await this.getimgservice.GetGraph(user[0].userID);
+        console.log('GetImg:', this.GetImg);
         this.ngAfterViewInit();
       }
     } catch (error) {
@@ -55,7 +55,7 @@ export class GraphComponent implements OnInit, AfterViewInit {
   }
 
   createCharts(): void {
-    console.log('GetImg:', this.GetImg);
+    // console.log('GetImg:', this.GetImg);
     for (const img of this.GetImg) {
       const id = `myChart${img.imageID}`;
       const existingCanvas = document.getElementById(id) as HTMLCanvasElement;
@@ -107,7 +107,7 @@ export class GraphComponent implements OnInit, AfterViewInit {
   }
   generateDateLabels(sevenDaysAgo: Date): string[] {
   const labels = [];
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 7; i++) {
     const date = new Date(sevenDaysAgo);
     date.setDate(sevenDaysAgo.getDate() + i);
     labels.push(date.toISOString().split('T')[0]);
@@ -117,7 +117,7 @@ export class GraphComponent implements OnInit, AfterViewInit {
 generateDataArray(voteDateArray: string[], totalScoreArray: number[], sevenDaysAgo: Date): number[] {
   const data = [];
 
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 7; i++) {
     const currentDate = new Date(sevenDaysAgo);
     currentDate.setDate(sevenDaysAgo.getDate() + i);
 

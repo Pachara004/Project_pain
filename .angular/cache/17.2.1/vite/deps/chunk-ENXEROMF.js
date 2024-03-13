@@ -2566,7 +2566,7 @@ var BidiModule = _BidiModule;
 })();
 
 // node_modules/@angular/cdk/fesm2022/cdk.mjs
-var VERSION = new Version("17.2.1");
+var VERSION = new Version("17.2.2");
 
 // node_modules/@angular/material/fesm2022/core.mjs
 var _c0 = ["*", [["mat-option"], ["ng-container"]]];
@@ -2606,7 +2606,7 @@ var _c3 = [[["mat-icon"]], "*"];
 var _c4 = ["mat-icon", "*"];
 var _c5 = ["mat-internal-form-field", ""];
 var _c6 = ["*"];
-var VERSION2 = new Version("17.2.1");
+var VERSION2 = new Version("17.2.2");
 var _AnimationCurves = class _AnimationCurves {
 };
 _AnimationCurves.STANDARD_CURVE = "cubic-bezier(0.4,0.0,0.2,1)";
@@ -4705,4 +4705,4 @@ export {
   MatRippleLoader,
   _MatInternalFormField
 };
-//# sourceMappingURL=chunk-GROUVUYE.js.map
+//# sourceMappingURL=chunk-ENXEROMF.js.map

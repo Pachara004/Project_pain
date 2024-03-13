@@ -6,7 +6,7 @@
     <div *ngFor="let img of GetImg" class="row chart-and-image-container">
       <div class="chart-container">
         <h2 style="margin-top: 20px; text-align: center;">{{ img.name }}</h2>
-        <canvas [id]="'myChart' + img.imageID" #chartCanvas></canvas>
+        <canvas [id]="'myChart' + img.imageID"></canvas>
       </div>
       <div class="image-container">
         <img class="image-item" src="{{img.imageURL}}" alt="" loading="lazy">

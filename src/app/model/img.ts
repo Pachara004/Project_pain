@@ -19,9 +19,9 @@ export interface GetRankToDay {
     ownerName: string;
 }
 export interface VoteImg {
-    voteDate: string;
-    totalScore: string;
     imageID: number;
     name : string;
+    voteDate: string;
+    totalScore: string;
     imageURL : string;
 }
