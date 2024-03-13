@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { Getimgservice } from '../services/api/Getimgservice';
 import { VoteImg } from '../model/img';
-import { Chart } from 'chart.js';
+import { Chart , registerables } from 'chart.js';
 
 @Component({
     selector: 'app-graph',
@@ -18,8 +18,11 @@ export class GraphComponent implements OnInit, AfterViewInit {
 
   GetImg: VoteImg[] = [];
   isLoading: boolean = true;
+  charts: Chart[] = [];
 
-  constructor(private getimgservice: Getimgservice ,private router: Router) {}
+  constructor(private getimgservice: Getimgservice ,private router: Router) {
+    Chart.register(...registerables);
+  }
 
   ngOnInit(): void {
     this.loadData();
