@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* สูงเท่ากับความสูงของหน้าจอ */
+  margin-left: 2px;
+}
+
+.card {
+  margin: 0 auto; /* จัดตรงกลางตามแนวนอน */
+  width: 400px;
+  height: 540px;
+  background-color: #575656;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.card-small h1 {
+  color: #000000;
+  margin-bottom: auto;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
+form {
+  width: 350px;
+  height: 500px;
+  margin: 0 auto; /* จัดตรงกลางตามแนวนอน */
+  padding: 20px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #444;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-log {
+  margin-bottom: auto;
+}

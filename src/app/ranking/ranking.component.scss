@@ -1,0 +1,139 @@
+.ranking-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(241, 241, 241, 0.281); /* ใช้ rgba() เพื่อเปลี่ยนสีพื้นหลังให้ไม่โปร่ง */
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dual Player List styles */
+.dual-player-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.player-column {
+  background-color: rgba(0, 0, 0, 0.505); /* ใช้ rgba() เพื่อเปลี่ยนสีพื้นหลังให้ไม่โปร่ง */
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.player-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.player-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.player-item:last-child {
+  border-bottom: none;
+}
+
+.player-details {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.player-position {
+  margin-right: 10px;
+  font-weight: bold;
+  min-width: 20px;
+  color: #333; /* Black for player position */
+}
+
+.player-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.player-info {
+  align-items: center;
+}
+
+.player-name {
+  font-weight: bold;
+  color: #ffffff; /* Black for player name */
+}
+
+.player-rating {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.player-difference {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Rankings 1-5 styles */
+.player-item:nth-child(-n+5) .player-position {
+  color: #ffcc00;
+}
+
+/* Rankings 6-10 styles */
+.player-item:nth-child(n+6) .player-position {
+  color: #3498db;
+}
+
+/* Hover effect */
+.player-item:hover {
+  background-color: #7b7b7b;
+}
+
+/* Not Logged In Popup styles */
+.not-logged-in {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.popup-container {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease-out;
+}
+
+.popup-text {
+  margin: 0;
+  font-size: 16px;
+}
+
+.popup-text a {
+  color: #ffc107;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.popup-text a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

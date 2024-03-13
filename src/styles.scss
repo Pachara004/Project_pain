@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Monaco:wght@300&family=Helvetica+Neue:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Linear+B&family=Noto+Sans+Thai&display=swap');
+
+html, body {
+  background-image: url(https://4kwallpapers.com/images/wallpapers/yahiko-pain-naruto-2880x1800-10865.png);
+  background-size: cover;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Noto Sans Linear B", "Noto Sans Thai", Monaco, "Helvetica Neue", sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

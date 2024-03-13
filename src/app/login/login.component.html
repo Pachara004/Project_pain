@@ -1,0 +1,20 @@
+<!-- <button class="btn btn-primary" (click)="votemain()">VOTE</button> -->
+<div class="container">
+    <div class="card">
+        <div class="card-small">
+            <form>
+                <h1>Login to Pain</h1>
+                    <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="Enter username" #usernameInput>
+                    </div>
+                    <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="Enter password" #passwordInput>
+                    </div>
+                    <div class="button-log">
+                        <button type="submit" class="btn btn-primary"(click)="loginuser(usernameInput.value, passwordInput.value,$event)">Login</button> <br><br>
+                        <button type="button" class="btn btn-secondary" (click)="signup()">Sign up</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>

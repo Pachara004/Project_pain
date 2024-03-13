@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+    <div class="card-small">
+      <form>
+        <h2>Sign Up</h2>
+        <div class="form-group-upload">
+          <div class="wrapper">
+            <div class="file-upload">
+              <label for="imageInput" class="upload-label">
+              </label>
+              <input type="file" id="imageInput" (change)="handleImage($event)" #imageInput>
+              <img *ngIf="selectedImage" [src]="selectedImage" alt="Selected Image" class="selected-image">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Username" #usernameInput>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" #passwordInput>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Confirm password" #confirmPasswordInput>
+        </div>
+        <div class="button-log">
+          <button type="submit" class="btn btn-primary" (click)="signup(usernameInput.value,passwordInput.value,confirmPasswordInput.value, $event)">Sign Up</button>
+          <br><br>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

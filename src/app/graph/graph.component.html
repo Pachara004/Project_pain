@@ -1,0 +1,22 @@
+<app-header></app-header>
+<h2 class="slide-up" style="margin-top: 100px; text-align: center;">Graph for the past 7 days</h2>
+<div class="wrapper">
+  <div *ngIf="isLoading" class="loading">Loading...</div>
+  <div *ngIf="!isLoading && GetImg && GetImg.length > 0" class="chart-container-wrapper container">
+    <div *ngFor="let img of GetImg" class="row chart-and-image-container">
+      <div class="chart-container">
+        <h2 style="margin-top: 20px; text-align: center;">{{ img.name }}</h2>
+        <canvas [id]="'myChart' + img.imageID" #chartCanvas></canvas>
+      </div>
+      <div class="image-container">
+        <img class="image-item" src="{{img.imageURL}}" alt="" loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!isLoading && (!GetImg || GetImg.length === 0)" class="centered-content">
+  <div class="popup-container">
+    <p class="popup-text">Yo! wanna see the detail? Go to <a (click)="login()">login</a> or <a (click)="signup()">sign up</a> for see the detail.</p>
+  </div>
+</div>

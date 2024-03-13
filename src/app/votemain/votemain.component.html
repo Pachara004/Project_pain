@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<div *ngIf="!show && countdownSeconds > 0" class="countdown-container">
+  <div class="countdown-content">
+    <h2>Voting completed for all images.</h2>
+    <p>Restarting in {{ countdownSeconds }} seconds.</p>
+  </div>
+</div>
+
+
+  <div style="display: flex; flex-direction: row;" *ngIf="show">
+    <div class="container">
+      <div *ngIf="selectedImages && selectedImages.length >= 2" >
+        <div class="card">
+          <div class="card-small">
+            <div class="overlay">
+              <div class="img-vs" (click)="onImageClick(0)">
+                <img [src]="selectedImages[0].imageURL" alt="Image 1">
+              </div><br><br>
+              <h3>{{selectedImages[0].name}}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div *ngIf="selectedImages && selectedImages.length >= 2" >
+        <div class="card">
+          <div class="card-small">
+            <div class="overlay">
+              <div class="img-vs" (click)="onImageClick(1)">
+                <img [src]="selectedImages[1].imageURL" alt="Image 2">
+              </div><br><br>
+              <h3>{{selectedImages[1].name}}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

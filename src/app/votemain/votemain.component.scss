@@ -1,0 +1,153 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.card {
+  width: 400px;
+  height: 540px;
+  background-color: #575656;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.card-small {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  background-color: #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-small h1 {
+  color: #000000;
+  margin-bottom: auto;
+}
+
+.card-small img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.img-vs img {
+  height: 350px;
+  width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.img-vs img:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  color: #000000;
+}
+
+.overlay h2 {
+  position: relative;
+  margin-bottom: auto;
+  margin-right: auto;
+  color: #000000;
+  margin: 15px;
+}
+
+.overlay h4 {
+  font-weight: bold;
+  color: #000000;
+}
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    animation: slideInUp 0.5s ease-out;
+  }
+
+  .card-small {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .img-vs img {
+    height: auto;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.img-vs img:hover {
+    transform: scale(1.1);
+}
+}
+.countdown-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.countdown-content {
+  text-align: center;
+}
+
+.countdown-content h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.countdown-content p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+/* เพิ่ม animation สำหรับการแสดงผลเมื่อมีการนับถอยหลัง */
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ใช้ animation ใน countdown-container เมื่อมีการแสดงผล */
+.countdown-container {
+  animation: slideInUp 0.5s ease-out;
+}
+

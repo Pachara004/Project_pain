@@ -1,0 +1,71 @@
+<app-header></app-header>
+
+<div class="ranking-container" *ngIf="isLoggedIn">
+  <div class="dual-player-list">
+    <div class="player-column">
+      <!-- <h3 style="color: #ffcc00;">Top 1-5</h3> -->
+      <ul class="player-list">
+        <li class="player-item" *ngFor="let player of rank.slice(0, 5); let i = index">
+          <div class="player-details">
+            <span class="player-position">{{ i + 1 }}.</span>
+            <img [src]="player.imageURL" alt="{{ player.name }}" class="player-image">
+            <div class="player-info">
+              <span class="player-name" style="color: aliceblue;">{{ player.name }}</span>
+              <br>
+              <span class="player-owner" style="color: #cccccc;">Owner: {{ player.ownerName }}</span>
+              <div *ngIf="player.RankingYesterDay && player.RankingToDay < player.RankingYesterDay; else down">
+                <h6 class="player-difference" style="color: green;">Up +{{ player.RankDifferent }}</h6>
+              </div>
+              <ng-template #down>
+                <div *ngIf="player.RankingYesterDay && player.RankingToDay > player.RankingYesterDay; else NoDiffer">
+                  <h6 class="player-difference" style="color: red;">Down {{ player.RankDifferent }}</h6>
+                </div>
+              </ng-template>
+              <ng-template #NoDiffer>
+                <div *ngIf="player.RankingYesterDay && player.RankingToDay === player.RankingYesterDay;">
+                  <h6 class="player-difference" style="color: gray;">No Change</h6>
+                </div>
+              </ng-template>
+              <span class="player-rating">Elo Rating: {{ player.score }}</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="player-column">
+      <!-- <h3 style="color: #3498db;">Top 6-10</h3> -->
+      <ul class="player-list">
+        <li class="player-item" *ngFor="let player of rank.slice(5, 10); let i = index">
+          <div class="player-details">
+            <span class="player-position">{{ i + 6 }}.</span>
+            <img [src]="player.imageURL" alt="{{ player.name }}" class="player-image">
+            <div class="player-info">
+              <span class="player-name" style="color: aliceblue;">{{ player.name }}</span>
+              <br>
+              <span class="player-owner" style="color: #cccccc;">Owner: {{ player.ownerName }}</span>
+              <div *ngIf="player.RankingYesterDay && player.RankingToDay < player.RankingYesterDay; else down">
+                <h6 class="player-difference" style="color: green;">Up +{{ player.RankDifferent }}</h6>
+              </div>
+              <ng-template #down>
+                <div *ngIf="player.RankingYesterDay && player.RankingToDay > player.RankingYesterDay; else NoDiffer">
+                  <h6 class="player-difference" style="color: red;">Down {{ player.RankDifferent }}</h6>
+                </div>
+              </ng-template>
+              <ng-template #NoDiffer>
+                <div *ngIf="player.RankingYesterDay && player.RankingToDay === player.RankingYesterDay;">
+                  <h6 class="player-difference" style="color: gray;">No Change</h6>
+                </div>
+              </ng-template>
+              <span class="player-rating">Elo Rating: {{ player.score }}</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="not-logged-in" *ngIf="!isLoggedIn">
+  <div class="popup-container">
+    <p class="popup-text">Yo! wanna see the detail? Go to <a (click)="login()">login</a> or <a (click)="signup()">sign up</a> for see the detail.</p>
+  </div>
+</div>

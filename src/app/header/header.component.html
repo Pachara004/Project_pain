@@ -1,0 +1,29 @@
+<div class="nav">
+  <div class="nav-logo">
+      <h1 class="pointer-link" (click)="Main()">
+        <img src="https://pnghq.com/wp-content/uploads/pnghq.com-akatsuki-naruto-anime.png" alt="" style="width: 50px; align-items: center;">
+      </h1>
+  </div>
+  <div class="right-header">
+    <input type="text" class="form-control" id="username" placeholder="Search">
+    <img src="https://cdn-icons-png.freepik.com/256/711/711319.png" (click)="search()" alt="" style="width: 30px;">
+    <div class="dropdown">
+      <button class="dropbtn">
+        <img *ngIf="profileImageUrl" [src]="profileImageUrl" alt="Profile Image" style="width: 45px; border-radius: 20px;">
+        <img *ngIf="!profileImageUrl" src="https://lens-storage.storage.googleapis.com/png/df7fe5a9628f4a8bb088c8e59a942b22" alt="Default Profile Image" style="width: 45px;">
+      </button>
+      <div class="dropdown-content">
+        <a class="pointer-link" (click)="goToProfile()">Profile</a>
+        <a class="pointer-link" (click)="goToRankings()">Rankings</a>
+        <a class="pointer-link" (click)="goToGraph()">Graph</a>
+      </div>
+    </div>
+    <div *ngIf="isLoggedIn$ | async; else loggedOutTemplate">
+      <button mat-raised-button color="warn" (click)="Logout()">LogOut</button>
+    </div>
+    <ng-template #loggedOutTemplate>
+      <button mat-raised-button color="warn" (click)="login()">Join Us</button>
+    </ng-template>
+
+  </div>
+</div>
